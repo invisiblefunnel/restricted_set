@@ -1,4 +1,4 @@
-# RestrictedSet
+# RestrictedSet [![Build Status](https://travis-ci.org/invisiblefunnel/restricted_set.png?branch=master)](https://travis-ci.org/invisiblefunnel/restricted_set)
 
 > RestricedSet implements a set with restrictions defined by a given block. If the block's arity is 2, it is called with the RestrictedSet itself and an object to see if the object is allowed to be put in the set. Otherwise, the block is called with an object to see if the object is allowed to be put in the set.
 
