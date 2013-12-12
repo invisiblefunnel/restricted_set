@@ -48,10 +48,20 @@ set #=> #<RestrictedSet: {:name, :location}>
 ```
 
 ```ruby
-set = RestrictedSet.new do |current_set, obj|
-  # TODO: Find a good example for a restriction which
-  #       depends on the current set of elements
+set = RestrictedSet.new do |current_set, _|
+  current_set.count + 1 <= 10 # Maximum of 10 objects
 end
+```
+
+```ruby
+require 'prime'
+class PrimeSet < RestrictedSet
+  def initialize(enum = nil)
+    super enum, &Prime.method(:prime?)
+  end
+end
+
+(1..100).to_set(PrimeSet) #=> #<PrimeSet: {2, 3, 5, 7, 11, 13, 17, 19, ...}>
 ```
 
 ## Contributing
