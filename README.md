@@ -51,8 +51,10 @@ set #=> #<RestrictedSet: {:name, :location}>
 
 ```ruby
 set = RestrictedSet.new do |current_set, _|
-  current_set.count + 1 <= 10 # Maximum of 10 objects
+  current_set.count + 1 <= 2 # Maximum of 2 objects
 end
+set << :a << :b << :c
+set #=> #<RestrictedSet: {:a, :b}>
 ```
 
 ```ruby
