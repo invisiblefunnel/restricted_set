@@ -6,6 +6,8 @@
 
 This project is inspired by a data structure described in the MRI codebase. The interface precisely matches the described class and the implementation is complete, tested and avoids dynamically defining methods on each instance.
 
+**Compatible with Ruby 1.9+**
+
 The source is released under the same terms as [Ruby][ruby-license].
 
 ## Installation
