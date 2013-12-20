@@ -11,8 +11,6 @@
 require "set"
 
 class RestrictedSet < Set
-  Identity = ->(o){ o }
-
   def initialize(enum = nil, &block)
     raise ArgumentError, "must provide a block" unless block_given?
 
@@ -22,7 +20,9 @@ class RestrictedSet < Set
               block
             end
 
-    super(enum, &Identity)
+    # Pass the identity proc to super to prevent
+    # passing the given block argument through
+    super(enum) { |o| o }
   end
 
   def add(o)
