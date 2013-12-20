@@ -24,6 +24,14 @@ class RestrictedSetTest < Minitest::Test
   end
 
   def test_add
+    s = RestrictedSet.new(&@arity_1_proc)
+    s.add(-1)
+    assert s.empty?
+
+    s = RestrictedSet.new(@enum, &@arity_2_proc)
+    s.add(4)
+    assert_equal [-2,3,4], s.sort
+
     s = RestrictedSet.new(@enum, &@arity_1_proc)
     assert_equal s, s.add(42)
     assert_equal [1,2,3,42], s.sort
@@ -31,6 +39,12 @@ class RestrictedSetTest < Minitest::Test
     s = RestrictedSet.new(@enum, &@arity_2_proc)
     assert_equal s, s.add(42)
     assert_equal [-2,3,42], s.sort
+  end
+
+  def test_shovel
+    s = RestrictedSet.new(&@arity_1_proc)
+    s << 2 << 1 << -1
+    assert_equal [1, 2], s.sort
   end
 
   def test_add?
