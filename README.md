@@ -4,7 +4,7 @@
 
 > Credit: [lib/set.rb][ruby-restricted-set]
 
-This project is inspired by a data structure described in the MRI codebase. The interface precisely matches the described class and the implementation is complete, tested and avoids dynamically defining methods on each instance.
+This project is inspired by a data structure described in the Ruby codebase. The interface matches the described class and the implementation is complete, tested and avoids dynamically defining methods on each instance.
 
 **Compatible with Ruby 1.9+**
 
@@ -15,8 +15,7 @@ The source is released under the same terms as [Ruby][ruby-license].
 Add this line to your application's Gemfile:
 
 ```ruby
-# Until published:
-gem 'restricted_set', github: 'invisiblefunnel/restricted_set'
+gem 'restricted_set'
 ```
 
 And then execute:

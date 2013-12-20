@@ -1,5 +1,5 @@
 # The following copyright notice is included because parts of this
-# library are modified from code in MRI's codebase.
+# library are modified from code in Ruby's codebase.
 
 # Copyright (c) 2002-2013 Akinori MUSHA <knu@iDaemons.org>
 #
