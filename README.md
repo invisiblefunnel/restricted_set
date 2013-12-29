@@ -67,6 +67,18 @@ end
 (1..100).to_set(PrimeSet) #=> #<PrimeSet: {2, 3, 5, 7, 11, 13, 17, 19, ...}>
 ```
 
+```ruby
+class NullSet < RestrictedSet
+  def initialize(enum = nil)
+    super(enum) { false }
+  end
+end
+
+set = NullSet.new
+set << 1 << 'a' << :b
+set #=> #<NullSet: {}>
+```
+
 ## Contributing
 
 1. Fork it
