@@ -9,6 +9,7 @@
 # terms as Ruby.
 
 require "set"
+require "restricted_set/version"
 
 class RestrictedSet < Set
   def initialize(enum = nil, &block)
@@ -45,6 +46,4 @@ class RestrictedSet < Set
   def restriction_proc
     @proc
   end
-
-  VERSION = "1.0.0"
 end

@@ -2,9 +2,11 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+require "restricted_set/version"
+
 Gem::Specification.new do |spec|
   spec.name          = "restricted_set"
-  spec.version       = "1.0.0"
+  spec.version       = RestrictedSet::VERSION
   spec.authors       = ["Danny Whalen"]
   spec.email         = ["daniel.r.whalen@gmail.com"]
   spec.description   = %q{Sets with conditional membership defined by a given block.}
