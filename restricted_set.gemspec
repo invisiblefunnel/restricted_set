@@ -16,7 +16,7 @@ the block is called with an object to see if the object is allowed to be
 put in the set.
   SUMMARY
   spec.homepage      = "https://github.com/invisiblefunnel/restricted_set"
-  spec.license       = "BSD"
+  spec.license       = "2-clause BSDL"
 
   spec.files         = `git ls-files`.split($/)
   spec.test_files    = spec.files.grep(%r{^test/})
