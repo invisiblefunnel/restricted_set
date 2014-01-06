@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = "1.0.0"
   spec.authors       = ["Danny Whalen"]
   spec.email         = ["daniel.r.whalen@gmail.com"]
-  spec.description   = %q{RestricedSet implements a set with restrictions defined by a given block.}
+  spec.description   = %q{Sets with conditional membership defined by a given block.}
   spec.summary       = <<-SUMMARY.gsub(/\n/, ' ').strip
 RestricedSet implements a set with restrictions defined by a given block.
 If the block's arity is 2, it is called with the RestrictedSet itself and
