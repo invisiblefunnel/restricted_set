@@ -74,9 +74,7 @@ class NullSet < RestrictedSet
   end
 end
 
-set = NullSet.new
-set << 1 << 'a' << :b
-set #=> #<NullSet: {}>
+NullSet[1, 'a', :b] #=> #<NullSet: {}>
 ```
 
 ## Contributing
